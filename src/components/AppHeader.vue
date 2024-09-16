@@ -15,6 +15,9 @@ export default {
 </script>
 
 <template>
+    <header>
+        <i><img src="../assets/img/dc-logo.png" alt=""></i>
+    </header>
 
 </template>
 
