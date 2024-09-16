@@ -16,9 +16,11 @@ export default {
 
 <template>
   <main>
-    <p>
-      {{ message }}
-    </p>
+    <div class="container">
+      <p>
+        {{ message }}
+      </p>
+    </div>
   </main>
 </template>
 
@@ -31,6 +33,8 @@ export default {
     p{
       color: white;
       padding: 30px 0;
+      font-size: 20px;
+      font-weight: bold
     }
   }
 

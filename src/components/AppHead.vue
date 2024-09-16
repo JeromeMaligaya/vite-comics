@@ -30,39 +30,44 @@ export default {
 
 <template>
     <header>
-        <!-- logo -->
-        <a href="#" class="img-box"><img src="../assets/img/dc-logo.png" alt="dc-logo"></a>
-        
-        <!-- list links -->
-        <nav>
-            <ul id="list-links">
-                <li v-for="(link, index) in headerListNav" @click="selectLink(index)" :class="{ active : currentIndex === index}">
-                    <a href="#"><span>{{ link.name.toUpperCase() }}</span></a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <!-- logo -->
+            <a href="#" class="img-box"><img src="../assets/img/dc-logo.png" alt="dc-logo"></a>
+            
+            <!-- list links -->
+            <nav>
+                <ul id="list-links">
+                    <li v-for="(link, index) in headerListNav" @click="selectLink(index)" :class="{ active : currentIndex === index}">
+                        <a href="#"><span>{{ link.name.toUpperCase() }}</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 </template>
 
 
 <style lang="scss" scoped>
 
-    header{
+    header .container{
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         .img-box{
-            height: 75px;
             width: 75px;
         }
+        nav,.img-box{
+            height: 75px;
+        }
 
-        nav, #list-links, #list-links li{
+        #list-links, #list-links li{
             height: 100%;
         }
 
-        #list-links{
+        #list-links, li{
             display: flex;
+            align-items: center;
         }
 
         #list-links li{
