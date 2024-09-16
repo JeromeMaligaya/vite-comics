@@ -21,9 +21,28 @@ export default {
 </script>
 
 <template>
-
+    <div id="footer-bottom">
+        <div class="container">
+            <a href="#">SIGN-UP NOW!</a>
+            <div class="social">
+                <p>FOLLOW US</p>
+                <ul>
+                    <li v-for="icon in iconList">
+                        <a href="#"><img :src="`../../assets/img/${icon.image}`" :alt="`${icon.image}`"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
+#footer-bottom{
+    background-color: black;
+
+    img{
+        color: red;
+    }
+}
 
 </style>
