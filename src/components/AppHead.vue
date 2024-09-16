@@ -44,5 +44,23 @@ export default {
 
 <style lang="scss" scoped>
 
+    header{
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a img{
+            height: 75px;
+        }
+
+        #list-links{
+            display: flex;
+        }
+
+        #list-links li{
+            padding: 15px;
+        }
+    }
 
 </style>
