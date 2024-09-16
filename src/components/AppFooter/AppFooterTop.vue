@@ -62,13 +62,13 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div id="footer-bottom" v-for="element in footerList">
-            <div class="card-footer">
+    <div id="footer-bottom">
+        <div class="container">
+            <div class="card-footer" v-for="element in footerList">
                 <h3>{{ element.title }}</h3>
                 <ul>
                     <li v-for="item in element.items">
-                        <span>{{ item.name }}</span>
+                        <span><a href="#">{{ item.name }}</a></span>
                     </li>
                 </ul>
             </div>
@@ -77,6 +77,28 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../../style/general.scss" as *;
+    @use "../../style/general.scss" as *;
+    
+    
+    #footer-bottom{
+        background-image: url(../../assets/img/footer-bg.jpg);
+        padding: 30px 0;
+        .container{
+            display: flex;
+        
+            .card-footer h3{
+            display: inline-block;
+            color: white;
+            margin-bottom: 15px;
+            }
 
+            .card-footer{
+                padding: 0 15px;
+            }
+
+            .card-footer li a{
+                color: #999;
+            }
+        }
+    }
 </style>
