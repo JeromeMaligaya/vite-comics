@@ -62,9 +62,21 @@ export default {
 </script>
 
 <template>
-
+    <div class="container">
+        <div id="footer-bottom" v-for="element in footerList">
+            <div class="card-footer">
+                <h3>{{ element.title }}</h3>
+                <ul>
+                    <li v-for="item in element.items">
+                        <span>{{ item.name }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../../style/general.scss" as *;
 
 </style>
