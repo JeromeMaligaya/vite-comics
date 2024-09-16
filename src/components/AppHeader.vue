@@ -26,7 +26,19 @@ export default {
 </script>
 
 <template>
-    
+    <header>
+        <!-- logo -->
+        <a href="#"><img src="../assets/img/dc-logo.png" alt="dc-logo"></a>
+        
+        <!-- list links -->
+        <nav>
+            <ul id="list-links">
+                <li v-for="link in headerListNav">
+                    <a href="#"><span>{{ link.name }}</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </template>
 
 
