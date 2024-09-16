@@ -13,14 +13,17 @@ export default {
             {name: 'fans', status: false},
             {name: 'news', status: false},
             {name: 'shop', status: false},
-        ]
+        ],
+        currentIndex : null,
     }
   },
   components: {
 
   },
   methods: {
-
+    selectLink(index){
+        this.currentIndex = index;
+    }
   },
 }
 </script>
@@ -28,13 +31,13 @@ export default {
 <template>
     <header>
         <!-- logo -->
-        <a href="#"><img src="../assets/img/dc-logo.png" alt="dc-logo"></a>
+        <a href="#" class="img-box"><img src="../assets/img/dc-logo.png" alt="dc-logo"></a>
         
         <!-- list links -->
         <nav>
             <ul id="list-links">
-                <li v-for="link in headerListNav">
-                    <a href="#"><span>{{ link.name }}</span></a>
+                <li v-for="(link, index) in headerListNav" @click="selectLink(index)" :class="{ active : currentIndex === index}">
+                    <a href="#"><span>{{ link.name.toUpperCase() }}</span></a>
                 </li>
             </ul>
         </nav>
@@ -45,13 +48,17 @@ export default {
 <style lang="scss" scoped>
 
     header{
-        padding: 10px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        a img{
+        .img-box{
             height: 75px;
+            width: 75px;
+        }
+
+        nav, #list-links, #list-links li{
+            height: 100%;
         }
 
         #list-links{
@@ -60,6 +67,16 @@ export default {
 
         #list-links li{
             padding: 15px;
+        }
+
+        li.active{
+           
+            border-bottom: solid 5px;
+                border-color: blue;
+            a span{
+                color: blue;
+                
+            }
         }
     }
 
