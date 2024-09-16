@@ -2,7 +2,18 @@
 export default {
   data(){
     return{
-
+        headerListNav : [
+            {name: 'characters', status: false},
+            {name: 'comics', status: false},
+            {name: 'movies', status: false},
+            {name: 'tv', status: false},
+            {name: 'games', status: false},
+            {name: 'collectibiles', status: false},
+            {name: 'videos', status: false},
+            {name: 'fans', status: false},
+            {name: 'news', status: false},
+            {name: 'shop', status: false},
+        ]
     }
   },
   components: {
@@ -15,10 +26,7 @@ export default {
 </script>
 
 <template>
-    <header>
-        <i><img src="../assets/img/dc-logo.png" alt=""></i>
-    </header>
-
+    
 </template>
 
 
