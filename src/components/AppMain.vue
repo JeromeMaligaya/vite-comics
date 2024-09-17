@@ -1,6 +1,7 @@
 <script>
 import AppMainBanner from './AppMain/AppMainBanner.vue';
 import AppMainListCards from './AppMain/AppMainListCards.vue';
+import AppMainJumbotron from './AppMain/AppMainJumbotron.vue';
 
 export default {
   data(){
@@ -11,6 +12,7 @@ export default {
   components: {
     AppMainBanner,
     AppMainListCards,
+    AppMainJumbotron,
   },
   methods: {
 
@@ -20,6 +22,9 @@ export default {
 
 <template>
   <main>
+    <section>
+      <AppMainJumbotron />
+    </section>
     <section>
       <div class="container"> 
           <AppMainListCards />
