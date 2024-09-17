@@ -1,5 +1,6 @@
 <script>
 import AppMainBanner from './AppMain/AppMainBanner.vue';
+import AppMainCard from './AppMain/AppMainCard.vue';
 
 export default {
   data(){
@@ -8,7 +9,8 @@ export default {
     }
   },
   components: {
-    AppMainBanner
+    AppMainBanner,
+    AppMainCard,
   },
   methods: {
 
@@ -23,9 +25,11 @@ export default {
         {{ message }}
       </p>
     </div>
-    <div class="container">
-      <AppMainBanner />
-    </div>
+    <div class="bg-AppMainBanner">
+      <div class="container">
+        <AppMainBanner />
+      </div>
+   </div>
   </main>
 </template>
 
@@ -40,6 +44,10 @@ export default {
       padding: 30px 0;
       font-size: 20px;
       font-weight: bold
+    }
+
+    .bg-AppMainBanner{
+      background-color: rgb(2, 130, 249);
     }
   }
 
