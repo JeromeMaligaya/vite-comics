@@ -1,4 +1,6 @@
 <script>
+import AppMainBanner from './AppMain/AppMainBanner.vue';
+
 export default {
   data(){
     return{
@@ -6,7 +8,7 @@ export default {
     }
   },
   components: {
-
+    AppMainBanner
   },
   methods: {
 
@@ -21,11 +23,14 @@ export default {
         {{ message }}
       </p>
     </div>
+    <div class="container">
+      <AppMainBanner />
+    </div>
   </main>
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 
   main{
     background-color: #1C1C1C;
