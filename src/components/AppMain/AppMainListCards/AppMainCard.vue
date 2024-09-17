@@ -5,6 +5,25 @@ export default {
 
     }
   },
+  props: {
+    thumbUrl : {
+        type: String,
+        required: true,
+    },
+    price : {
+        type: String,
+        required: true,
+    },
+    series : {
+        type: String,
+        required: true,
+    },
+    type : {
+        type: String,
+        required: true,
+    }
+
+  },
   components: {
 
   },

@@ -92,7 +92,12 @@ export default {
 
 <template>
     <ul>
-      <AppMainCard />  
+      <AppMainCard v-for="(card, index) in thumbsListCards" :key="index"
+        :thumbUrl = 'card.thumb'
+        :price = 'card.price'
+        :series = 'card.series'
+        :type = 'card.type'
+      />  
     </ul>
 </template>
 
