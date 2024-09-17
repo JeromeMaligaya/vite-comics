@@ -91,16 +91,21 @@ export default {
 </script>
 
 <template>
-    <ul>
+    <ul class="row-thumbs">
       <AppMainCard v-for="(card, index) in thumbsListCards" :key="index"
         :thumbUrl = 'card.thumb'
         :price = 'card.price'
-        :series = 'card.series'
+        :series = 'card.series.toUpperCase()'
         :type = 'card.type'
       />  
     </ul>
 </template>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+    .row-thumbs{
+        padding: 40px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
 </style>
