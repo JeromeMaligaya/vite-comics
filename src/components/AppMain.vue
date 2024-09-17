@@ -1,16 +1,16 @@
 <script>
 import AppMainBanner from './AppMain/AppMainBanner.vue';
-import AppMainCard from './AppMain/AppMainCard.vue';
+import AppMainListCards from './AppMain/AppMainListCards.vue';
 
 export default {
   data(){
     return{
-      message: '--> Content goes here <--'
+
     }
   },
   components: {
     AppMainBanner,
-    AppMainCard,
+    AppMainListCards,
   },
   methods: {
 
@@ -20,16 +20,16 @@ export default {
 
 <template>
   <main>
-    <div class="container">
-      <p>
-        {{ message }}
-      </p>
-    </div>
-    <div class="bg-AppMainBanner">
+    <section>
+      <div class="container"> 
+          <AppMainListCards />
+      </div>
+    </section>
+    <section class="bg-AppMainBanner">
       <div class="container">
         <AppMainBanner />
       </div>
-   </div>
+    </section>
   </main>
 </template>
 
