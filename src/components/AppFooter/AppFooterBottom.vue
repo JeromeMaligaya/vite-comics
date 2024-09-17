@@ -4,7 +4,7 @@ export default {
     return{
         iconList: [
             {image:'footer-facebook.png'},
-            {image:'footer-periscospe.png'},
+            {image:'footer-periscope.png'},
             {image:'footer-pinterest.png'},
             {image:'footer-twitter.png'},
             {image:'footer-youtube.png'},
@@ -14,7 +14,10 @@ export default {
   components: {
 
   },
-  methods: {
+  methods:{
+    getImagePath(img){
+        return new URL(`../../assets/img/${img}`, import.meta.url).href
+    }
 
   },
 }
@@ -23,12 +26,12 @@ export default {
 <template>
     <div id="footer-bottom">
         <div class="container">
-            <a href="#">SIGN-UP NOW!</a>
+            <a class="btn" href="#">SIGN-UP NOW!</a>
             <div class="social">
                 <p>FOLLOW US</p>
                 <ul>
                     <li v-for="icon in iconList">
-                        <a href="#"><img :src="`../../assets/img/${icon.image}`" :alt="`${icon.image}`"></a>
+                        <a href="#"><img :src="getImagePath(icon.image)" :alt="`${icon.image}`"></a>
                     </li>
                 </ul>
             </div>
@@ -38,10 +41,34 @@ export default {
 
 <style lang="scss" scoped>
 #footer-bottom{
-    background-color: black;
+    background-color: #303030;
 
-    img{
-        color: red;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        a.btn{
+            color: white;
+            border: 2px solid #0282F9;
+            padding: 5px;
+        }
+
+        .social{
+        display: flex;
+        align-items: center;
+
+        p{
+          color:#0282F9;
+          margin-right: 10px;  
+        }
+
+        ul{
+            display: flex;
+            gap: 10px;
+        }
+    }
     }
 }
 
