@@ -99,6 +99,8 @@ export default {
         :type = 'card.type'
       />  
     </ul>
+
+    <button type="button" class="button-load">LOAD MORE</button>
 </template>
 
 <style lang="scss">
@@ -107,5 +109,17 @@ export default {
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
+    }
+
+    .button-load{
+        padding: 5px 30px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-color: transparent;
+        color: white;
+        background-color: rgb(2, 130, 249);
+        font-size: 10px;
+        cursor: pointer;
     }
 </style>
